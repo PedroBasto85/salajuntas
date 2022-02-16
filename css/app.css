@@ -1,0 +1,943 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+html, body{
+    /*background-color: #161E83; /*#0847FC*/ ;
+    font-family: "Open Sans","Abel", sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+input, select{
+    margin-top: 15px!important;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+span{
+    font-size: 1.25rem;
+}
+
+span.titulo2{
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+    color: #aaaaaa;/*#d1d1d1;*/
+}
+
+span.titulo{
+    color: #ffffff;
+}
+
+.logo{
+    text-align: center;
+    position: relative;
+    display: block;
+    height: auto;
+    margin: 50px auto 50px auto;
+    /*margin-bottom: 150px;*/
+}
+
+.logo img{
+    width: 90%;
+    max-width: 600px;
+}
+
+.login{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    top: 5%;
+    position: relative;
+    display: block;
+}
+
+.inicio{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    top: 8%;
+    position: relative;
+    display: block;
+}
+
+.asistentes{
+    background-color:#0B0B0B; /*#0847FC;*/
+    position: relative;
+    display: none;
+    margin: 50px auto;
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+}
+
+.lista{
+    display: block;
+}
+
+ul.listas{
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+}
+
+ul.listas:hover{
+    text-decoration: none;
+}
+
+ul.listas > li{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #222222;
+}
+
+ul.listas > li:hover{
+    outline: none;
+    text-decoration: none;
+}
+
+ul.listas > li label:hover{
+    cursor: pointer;
+    color: #eeeeee;
+    text-decoration: none;
+    outline: none;
+}
+
+ul.listas > li > a:after{
+    text-decoration: none;
+}
+
+ul.listaContactos{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+ul.listas > li > ul.listaContactos:hover{
+    text-decoration: none;
+}
+ul.listaContactos:hover{
+    text-decoration: none;
+}
+
+ul.listaContactos > li{
+    display: inline-table;
+}
+
+.activo{
+    /*background-color: #6E0000;*/
+    color: #6E0000;
+}
+.titAsistentes{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    height: 2.5rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #222222;
+}
+.titEncabezado{
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    height: 2.5rem;
+    margin: 5px 0 5px 0;
+    border-bottom: 1px solid #222222;
+}
+
+.rowListas{
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding-top: 10px;
+    /*overflow:auto;
+    /*height: 250px;*/
+    /*overflow-y: scroll ;*/
+}
+
+.nuevo, .nuevogrupo{
+    display: none;
+}
+.cerrar{
+    margin: 0;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    display: block;
+    z-index: 99999;
+}
+
+.iconocerrar{
+    position: relative;
+    float: right;
+    margin: 20px;
+}
+
+.agendar{
+    background-color:#0B0B0B; /*#0847FC;*/
+    position: absolute;
+    display: none;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+}
+
+.agenda{
+    background-color:#0B0B0B;
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    top: 100px;
+    position: absolute;
+    display: none;
+    z-index: 9999999;
+}
+
+.linea{
+    position: relative;
+    border-bottom: 1px solid #222222; /*#aaaaaa; /*#a0a0a6;*/
+    height: 1px;
+    margin: 10px auto 0px auto;
+}
+
+.campo{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #222222;/*#aaaaaa; /*#0077ff*/;
+    color: #ffffff;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.campo:focus{
+    border: 1px solid #fff;
+    outline: none;
+}
+
+.campologin{
+    border: 1px solid #0077ff;
+}
+
+.campologin:focus{
+    border: 1px solid #fff;
+    outline: none;
+}
+
+.botonmin{
+    margin: 15px auto;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #00468C;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    color: #03A5BE;/*#03E3AF;/*#5588ff;*/
+    border-radius: 10px;
+}
+.botonmin:hover {
+    /*font-size: 1.55rem;
+    /*text-decoration: underline;*/
+    /*border-bottom: 1px solid #ffffff;
+    /*border-right: 1px solid #ffffff;*/
+}
+
+.botonnormal{
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: none;
+}
+
+.persona{
+    background: url(../img/usuario1.png);
+    background-position: 95% center;
+    background-origin: border-box;
+    background-repeat: no-repeat ;
+}
+
+.fecha{
+    background: url(../img/calendario1.png) no-repeat 95% center;
+    /*background-position: 95% center;
+    background-origin: border-box;
+    background-repeat: no-repeat ;*/
+}
+.hora{
+    background: url(../img/reloj1.png) no-repeat 95% center;
+    /*background-position: 95% center;
+    background-origin: border-box;
+    background-repeat: no-repeat ;*/
+}
+
+.ubicacion{
+    position: relative;
+    display: block;
+    margin-top: 150px;
+}
+.degradado{
+    color: #aaaaaa;
+    font-size: 1.1rem;
+    opacity: 0.4;
+}
+
+.imagenpie{
+    width: 40%;
+    max-width: 250px;
+    opacity: 0.4;
+}
+
+.firmas{
+    margin-top: 150px;
+    overflow: visible;
+    margin-bottom: 100px;
+}
+
+.nombreusuario{
+    color: #4C2EF3; /*#00468C;*/
+    font-size: 1.2rem;
+}
+
+.contenedor{
+    margin-top: 50px;
+    height: 600px;
+    overflow: hidden;
+    /*border-bottom: 1px solid #aaaaaa;*/
+}
+
+/***********************************/
+
+.header{
+    position: relative;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color:#0B0B0B; /*#0847FC; /*#222222;*/
+    color: #ffffff;
+    padding: 10px 0px;
+    box-sizing: content-box;
+    border-bottom: 1px solid #4C2EF3; /*#aaaaaa;*/
+}
+
+.icono{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    width: 180px;
+    height: 100px;
+    line-height: 100px;
+    background-color:#0B0B0B; /*#0847FC; /*#222222;*/
+    color: #ffffff;
+    padding: 10px 0;
+    box-sizing: content-box;
+    z-index: 88888;
+}
+
+.iconosalir{
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    margin-right: 0;
+    width: 50px;
+    height: 100px;
+    line-height: 100px;
+    background-color:#0B0B0B; /*#0847FC; /*#222222;*/
+    color: #ffffff;
+    padding: 10px 0px;
+    box-sizing: content-box;
+    z-index: 88888;
+}
+
+.imagencelda2{
+    width: 100%;
+    height: auto;
+    max-width: 160px;
+}
+
+.busqueda{
+    position: absolute;
+    display: block;
+    top: 150px;
+    left: 0;
+    margin-left: 0;
+    width: 170px;
+    height: auto;
+    background-color:#0B0B0B; /*#0847FC; /*#222222;*/
+    color: #ffffff;
+    padding: 20px 0 0 0;
+    box-sizing: content-box;
+    z-index: 77777;
+}
+
+.tabla {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.tabla1{
+    height: 50px;
+}
+
+.fila0{
+    width: 100%;
+    max-width: 100%;
+}
+
+.fila {
+    display: table-row;
+    height: auto;
+}
+
+.celda {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: auto;
+    width: 100%;
+}
+.imagencelda{
+    width: 100%;
+    height: auto;
+}
+
+.usuario{
+    text-align: right;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.5rem;
+
+}
+#fileAvatar{
+    display: inline;
+
+}
+.avatar{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.avatar img{
+    width: 32px;
+}
+
+.salir{
+    margin-top: 10px;
+    text-align: right;
+    padding: 5px;
+    line-height: 36px;
+}
+
+.salir a{
+    text-decoration: none;
+    color: #0847FC;
+    font-size: 1.5rem;
+}
+
+.cancelar{
+    color: #FF2626;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.fechas{
+    position: relative;
+    display: block;
+    margin-top: 50px;
+    height: 50px;
+    margin-bottom: 50px;
+    /*line-height: 50px;*/
+}
+
+.fechas span{
+    font-size: 1.25rem;
+    color: #aaaaaa;/*#36DAD8;*/
+}
+
+.fechas a{
+    text-decoration: none;
+}
+
+.agendadiaria{
+    position: relative;
+    display: block;
+    /*margin-top: 50px;*/
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    /*overflow-y: scroll;
+    overflow-x: hidden;
+    /*top: 50px;*/
+}
+
+.borde{
+    /*border-left: 1px solid #eee;*/
+    margin-top: 25px;
+}
+
+.miagenda{
+    position: relative;
+    display: block;
+    margin-top: 50px;
+    height: auto;
+}
+
+.numero{
+    margin: 15px auto;
+}
+
+.numero h1{
+    margin: 0;
+    color: #aaaaaa;
+    font-size: 2.5rem;
+}
+
+.letragrid{
+    color: #aaaaaa;
+}
+.horainicio{
+    font-size: 1.5rem ;
+}
+
+.tablas{
+    width: 100%;
+    font-size: 1.2rem;
+    border-collapse: collapse !important;
+    border-spacing: 5px !important;
+    /*border-collapse: collapse !important;*/
+}
+
+.tablas thead{
+    height: 25px;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 1.1rem;
+    border: none;
+    font-weight: bold;
+}
+
+.tablas thead tr{
+    border: none;
+}
+
+.tablas tr{
+    height: 50px;
+    vertical-align: middle;
+}
+.tablas td{
+    /*padding: 5px;*/
+}
+
+.tablas tfoot{
+    background-color: #3c3f41 !important;
+    color: #fff;
+    text-align: right;
+}
+
+.tablas tfoot tr{
+    height: 10px;
+}
+.tablas tfoot a{
+    background-color: #fff;
+    color: #3c3f41 !important;
+    font-size: 1.0rem;
+    width: 10px;
+    display: inline-block;
+    text-align: center;
+    height: 10px;
+    line-height: 10px;
+}
+
+/***********************************/
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #080808;/*#fff;*/
+    z-index: 99999999999;
+    opacity: .75;
+    -moz-opacity: 0.75;
+    filter: alpha(opacity=75);
+}
+
+/* estilo para lo q este dentro de la ventana modal */
+.modal {
+    border: none;
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: transparent;/*#fff;/*#008cba;*/
+    color: #2626FF;/*#0847FC;*/
+    z-index: 999999999999;
+    overflow: auto;
+    margin: 0 auto;
+    line-height: 100%;
+    font-size: 2.5rem;
+    /*opacity: .75;
+    -moz-opacity: 0.75;
+    filter: alpha(opacity=75);*/
+}
+
+.filaestado{
+    margin: 0 0 10px 0;
+    line-height: 40px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.filaconfig{
+    margin: 0 0 10px 0;
+    border: 3px solid #36DAD8;
+    background-color: transparent;
+    line-height: 40px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.estado{
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.agendadoletra{
+    color: #36DAD8;
+}
+.encursoletra{
+    color: #FF9326; /*#fbcb09;*/
+}
+.canceladoletra{
+    color: #6E0000;/*#cd0a0a;*/
+}
+.finalizadoletra{
+    color: #1C26AD; /*#0077ff;*/
+}
+
+.agendado{
+    border: 3px solid #36DAD8;
+    background-color: transparent;
+}
+
+.encurso{
+    border: 3px solid  #FF9326;
+    background-color: transparent;
+}
+.cancelado{
+    border: 3px solid #6E0000;
+    background-color: transparent;
+}
+.finalizado{
+    border: 3px solid #1C26AD;
+    background-color: transparent;
+}
+
+.horaselect option{
+    color: #0077ff;
+    background-color: transparent;
+    padding: 10px;
+    margin: 10px;
+    height: 25px;
+}
+.error{
+    width: 100% !important;
+    color: #2626FF;/*#cd0a0a;*/
+    text-align: center;
+    background-color: #0B0B0B; /*#ffffff*/;
+    padding: 20px;
+    font-weight: bold;
+    display: none;
+    font-size: 1.25rem;
+}
+
+.center{
+    text-align: center;
+}
+
+.iconomenu{
+    width: 100px;
+    max-width: 100px;
+    float: left;
+    padding: 0 5px;
+    position: relative;
+}
+
+a.listasa{
+    color: inherit;
+    text-decoration: none;
+}
+
+a.listasa:active{
+    color: inherit;
+}
+
+a.listasa:visited{
+    color: inherit;
+}
+
+a.listasa:hover{
+    text-decoration: underline;
+}
+
+
+/*DatePicker*/
+.ui-widget-header{
+    border: none !important;
+    border-bottom: 1px solid #aaa !important;
+}
+.ui-datepicker td span, .ui-datepicker td a{
+    text-align: center !important;
+}
+
+.ajuste{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*Check Redondo*/
+/* ROUNDED ONE */
+.roundedOne {
+    width: 20px;
+    height: 20px;
+    background: #fcfff4;
+    float: right;
+
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+    margin: 0 0 -3px 0px;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.roundedOne label {
+    cursor: pointer;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    left: 3px;
+    top: 3px;
+
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+
+    background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
+    background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
+    background: -o-linear-gradient(top, #222 0%, #45484d 100%);
+    background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
+    background: linear-gradient(top, #222 0%, #45484d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+}
+
+.roundedOne label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #0077ff;/*#00bf00;*/
+
+    /*background: -webkit-linear-gradient(top, #00bf00 0%, #009400 100%);
+    background: -moz-linear-gradient(top, #00bf00 0%, #009400 100%);
+    background: -o-linear-gradient(top, #00bf00 0%, #009400 100%);
+    background: -ms-linear-gradient(top, #00bf00 0%, #009400 100%);
+    background: linear-gradient(top, #00bf00 0%, #009400 100%);
+*/
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    top: 2px;
+    left: 2px;
+
+    /*-webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);*/
+}
+
+.roundedOne label:hover::after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+.roundedOne input[type=checkbox]:checked + label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+
+/**/
+:invalid {
+    box-shadow: none;
+}
+
+:-moz-submit-invalid {
+    box-shadow: none;
+}
+
+:-moz-ui-invalid {
+    box-shadow:none;
+}
+
+/**************************/
+::-webkit-input-placeholder {
+    color: #222;/*#a0a0a6; /*#0077ff;*/
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+
+    color: #222;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+
+    color: #222;
+}
+:-ms-input-placeholder {
+    color: #222;
+}
+/**************************/
+
+.colorgris{
+    color: #777777;
+}
+
+.color4{
+    color: #444444;
+}
+
+.color3{
+    color: #333333
+}
+
+.letraDe{
+    font-size: 1.4rem;
+}
+
+.letraTitulo{
+    font-size: 1.2rem;
+}
+
+/***********Usuarios*********/
+.listado{
+    display: block;
+    position: relative;
+    margin-top: 50px;
+}
+
+.datosusuario{
+    margin-top: 50px;
+    position: relative;
+    display: none;
+}
+
+.cancelargrid{
+    position: absolute;
+    display: none;
+    width: 400px;
+    height: auto;
+    background-color: #0B0B0B;
+    border: 1px solid #4C2EF3 ;
+    padding: 20px 5px;
+}
+
+@media screen and (max-width: 768px) {
+    #linkReservar{
+        width: 24px;
+    }
+
+    .avatar img{
+        width: 24px;
+    }
+}
+
+@media screen and (min-width: 1366px){
+    .icono{
+        left:25px;
+    }
+    .busqueda{
+        left:25px;
+    }
+    .iconosalir{
+        right: 25px;
+    }
+}
+
+/****************************/
